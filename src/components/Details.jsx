@@ -125,7 +125,7 @@ const Details = () => {
                         <p>Plain Text  size</p>
                     </div>
                     <div className="box rounded-xl">
-                        <h1 className="text-3xl">{(data?.items[0]?.meta?.content?.plain_text_rate).toFixed(2)}</h1>
+                        <h1 className="text-3xl">{(data?.items[0]?.meta?.content?.plain_text_rate)?.toFixed(2)}</h1>
                         <p>Plain Text  Rate</p>
                     </div>
                     <div className="box rounded-xl">
