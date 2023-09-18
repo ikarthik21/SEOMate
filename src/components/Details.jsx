@@ -22,7 +22,7 @@ const Details = () => {
         (async () => {
             const url = params.url;
             if (url) {
-                 await postDataForSEO(url);
+                await postDataForSEO(url);
             }
         }
         )();
@@ -31,7 +31,7 @@ const Details = () => {
 
     socket.on("id_receive", (id) => {
         setId(id);
-       
+
     });
 
 
@@ -398,28 +398,27 @@ const Details = () => {
 
 
 
-                    {Object.keys(data?.items[0]?.meta?.social_media_tags).map((key) => (
-                        <div key={key} className='flex border border-slate-30 p-4 items-center justify-start m-auto'  >
-
-
-                            <div className='mr-8 flex1'>
-                                <p> {key}</p>
+                    {data?.items[0]?.meta?.social_media_tags ? (
+                        Object.keys(data.items[0].meta.social_media_tags).map((key) => (
+                            <div key={key} className='flex border border-slate-30 p-4 items-center justify-start m-auto'>
+                                <div className='mr-8 flex1'>
+                                    <p>{key}</p>
+                                </div>
+                                <div className='flex justify-start flex2'>
+                                    <p>{data.items[0].meta.social_media_tags[key]}</p>
+                                </div>
                             </div>
-
-                            <div className='flex justify-start flex2' >
-
-                                <p>{data?.items[0]?.meta?.social_media_tags[key]}</p>
-                            </div>
-
-                        </div>
-                    ))}
+                        ))
+                    ) : (
+                        <p>No social media tags available</p>
+                    )}
 
                 </div>
 
 
             </div>
             :
-            
+
             <Loading />
 
     )
