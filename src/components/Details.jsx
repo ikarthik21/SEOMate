@@ -44,7 +44,7 @@ const Details = () => {
             if (id) {
                 try {
                     const res = await fetchDetails(id);
-                    setData(res[0].result[0])
+                    setData(res[0]?.result[0])
                 } catch (error) {
                     console.log(error);
                 }
