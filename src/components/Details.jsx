@@ -21,7 +21,7 @@ const Details = () => {
     // // post url for Id
     useEffect(() => {
         (async () => {
-            const url = validateAndTrimURL(params.url);
+            const url = params.url;
             if (url) {
                 await postDataForSEO(url);
             }
