@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { postDataForSEO, fetchDetails } from '../service/API';
 import { io } from "socket.io-client";
+import { validateAndTrimURL } from './Home';
 
 import { TiTick } from 'react-icons/ti'
 
@@ -20,7 +21,7 @@ const Details = () => {
     // // post url for Id
     useEffect(() => {
         (async () => {
-            const url = params.url;
+            const url = validateAndTrimURL(params.url);
             if (url) {
                 await postDataForSEO(url);
             }
