@@ -1,13 +1,129 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.homebg {
+    background-image: linear-gradient(110.5deg, rgba(71, 114, 148, 1) 14.9%, rgba(149, 245, 211, 1) 77.9%);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+   
+}
+
+@media (min-width: 300px) and (max-width :450px) {
+
+
+    .homebg {
+        height: 120vh;
+        width: 110vw;
+        padding-top: 150px;
+    }
+}
+
+body {
+    min-height: 100vh;
+
+}
+
+
+
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    border: 0.5px solid #9d9d9d;
+    color: rgb(62, 62, 62);
+    min-width: 300px;
+    min-height: 100px;
+
+}
+
+.box h1 {
+    margin: 10px;
+    color: #ff5c5c;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+
+
+.box p {
+    font-weight: 400;
+
+}
+
+.box2 {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 1.2rem;
+    padding: 4.5rem 1.2rem;
+    margin: 0.8rem;
+    height: 125px;
+    width: 300px;
+    border: 0.5px solid #9d9d9d;
+    color: rgb(62, 62, 62);
+}
+
+.box2 p {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.box2 h1 {
+    color: #ff5c5c;
+    font-weight: 500;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+
+.box3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(62, 62, 62);
+    margin: 0.8rem;
+    padding: 1.2rem 4rem;
+    background-color: #e4e4e4;
+    border-radius: 8px;
+    min-width: 300px;
+}
+
+
+.box3 h1 {
+    color: #ff5c5c;
+    font-weight: 500;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+
+
+.flex1 {
+    flex: 1;
+    min-width: 100px;
+
+}
+
+.flex2 {
+    flex: 2;
+}
+
+.head_text {
+    color: #212121;
 }
